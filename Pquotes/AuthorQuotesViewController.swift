@@ -9,10 +9,21 @@
 import UIKit
 
 class AuthorQuotesViewController: UIViewController {
+    @IBOutlet weak var quotes: UIWebView!
+    var quoteText:[String] = []
+    var htmlContent:String = ""
+   convenience init(quotes:[String]){
+        self.init()
+        self.quoteText = quotes
+        self.htmlContent = createHtmlContent(quotes)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("inside the author VC and text is \(htmlContent)")
+        quotes.loadHTMLString(htmlContent, baseURL: nil)
+        quotes.allowsLinkPreview = true
+        self.navigationController?.isNavigationBarHidden = false
         // Do any additional setup after loading the view.
     }
 
@@ -32,4 +43,11 @@ class AuthorQuotesViewController: UIViewController {
     }
     */
 
+    func createHtmlContent(_ quotesArray: [String]) -> String{
+        var html:String = ""
+        for i in quotesArray{
+            html.append("<p>\(i)</p><br>")
+        }
+        return html
+    }
 }

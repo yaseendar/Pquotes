@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SwiftyJSON
 
 class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelegate, UITableViewDelegate {
     
@@ -16,7 +16,7 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelega
     
     @IBOutlet weak var tableView: UITableView!
     let data = authors
-    
+    var quotesOfAuthor: [String:[String]] = [:]
     var filteredData: [String]!
 
     override func viewDidLoad() {
@@ -25,6 +25,9 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelega
         searchBar.delegate = self
         tableView.delegate = self
         filteredData = data
+        quotesOfAuthor = loadData()
+        self.navigationController?.isNavigationBarHidden = false
+        print("hurray \(quotesOfAuthor)")
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -51,11 +54,32 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelega
     }
    
      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let author = data[indexPath.row] 
+        let author = data[indexPath.row]
+        let authorVC = AuthorQuotesViewController(quotes: quotesOfAuthor[author]!)
+        self.navigationController?.pushViewController(authorVC, animated: false)
         print (author)
         
     }
     
-    
+    func loadData() -> [String:[String]]{
+        var quotesDict:[String:[String]] = [:]
+        guard let path = Bundle.main.path(forResource: "comments.json", ofType: nil) else {
+            super.viewDidLoad()
+            return ["":[""]]
+        }
+        do
+        {
+        let jsonData = try JSON(data:String(contentsOfFile: path, encoding: String.Encoding.utf8).data(using: String.Encoding.utf8)!)
+            let dict = jsonData.dictionaryObject
+            for (author,quotes) in dict!{
+                quotesDict[author] = quotes as? [String]
+                //print("The Author name is \(author as String) and quotes dic is \(quotes.array)")
+            }
+        }
+        catch {
+            print("Error loading JSON")
+        }
+       return quotesDict
+    }
 }
 
