@@ -21,21 +21,39 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelega
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.edgesForExtendedLayout = []
+        //self.automaticallyAdjustsScrollViewInsets = false
+        self.title = "Quotes"
         tableView.dataSource = self
         searchBar.delegate = self
         tableView.delegate = self
         filteredData = data
         quotesOfAuthor = loadData()
         self.navigationController?.isNavigationBarHidden = false
+//        self.navigationController?.navigationBar.barTintColor = hexStringToUIColor(hex : "#00c4cc")
+//        self.searchBar?.barTintColor = hexStringToUIColor(hex : "#00c4cc")
         print("hurray \(quotesOfAuthor)")
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let selectionIndexPath = self.tableView.indexPathForSelectedRow {
+            self.tableView.deselectRow(at: selectionIndexPath, animated: animated)
+        }
+        searchBar.resignFirstResponder()
+    }
    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let lbl:String
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as UITableViewCell
-        cell.textLabel?.text = filteredData[indexPath.row]
+        if searchBar.isFirstResponder && searchBar.text != ""{
+            lbl = filteredData[indexPath.row]
+        }
+        else{
+            lbl = data[indexPath.row]
+        }
+        cell.textLabel?.text = lbl
         return cell
     }
     
@@ -45,18 +63,37 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelega
     
     // This method updates filteredData based on the text in the Search Box
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
+        //searchBar.showsCancelButton = true
         filteredData = searchText.isEmpty ? data : data.filter { (item: String) -> Bool in
             return item.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
         }
-        
+        if searchText != ""{
+            searchBar.showsCancelButton = true        }
         tableView.reloadData()
     }
    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        searchBar.showsCancelButton = false
+        searchBar.text = ""
+        filteredData = data
+        tableView.reloadData()
+    }
+
      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let author = data[indexPath.row]
-        let authorVC = AuthorQuotesViewController(quotes: quotesOfAuthor[author]!)
-        self.navigationController?.pushViewController(authorVC, animated: false)
+        let author : String
+        if searchBar.isFirstResponder && searchBar.text != ""{
+            author = filteredData[indexPath.row]
+        }
+        else{
+            author = data[indexPath.row]
+        }
+       // let authorVC = QuotesView(quotes: quotesOfAuthor[author]!)
+        let viewName = "quotesView"
+        let destinationView = self.storyboard?.instantiateViewController(withIdentifier: viewName) as! QuotesView
+        destinationView.htmlContent = destinationView.createHtmlContent(quotesOfAuthor[author]!)
+        self.navigationController?.pushViewController(destinationView, animated: false)
+//         self.navigationController?.present(destinationView, animated: false, completion: nil)
         print (author)
         
     }
@@ -82,4 +119,5 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelega
        return quotesDict
     }
 }
+
 

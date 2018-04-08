@@ -9,22 +9,20 @@
 /* Begin PBXBuildFile section */
 		083A1E2E206CDAE10000D6B2 /* comments.json in Resources */ = {isa = PBXBuildFile; fileRef = 083A1E2D206CDAE10000D6B2 /* comments.json */; };
 		083A1E31206CDBAF0000D6B2 /* PodFile in Resources */ = {isa = PBXBuildFile; fileRef = 083A1E30206CDBAF0000D6B2 /* PodFile */; };
-		08A347DD20721C0600C63150 /* AuthorQuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A347DB20721C0600C63150 /* AuthorQuotesViewController.swift */; };
-		08A347DE20721C0600C63150 /* AuthorQuotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08A347DC20721C0600C63150 /* AuthorQuotesViewController.xib */; };
 		08A40179206CCBC200D902DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A40178206CCBC200D902DF /* AppDelegate.swift */; };
 		08A4017B206CCBC200D902DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A4017A206CCBC200D902DF /* ViewController.swift */; };
 		08A4017E206CCBC200D902DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08A4017C206CCBC200D902DF /* Main.storyboard */; };
 		08A40180206CCBC200D902DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08A4017F206CCBC200D902DF /* Assets.xcassets */; };
 		08A40183206CCBC200D902DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08A40181206CCBC200D902DF /* LaunchScreen.storyboard */; };
 		08A4018C206CCEEB00D902DF /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A4018B206CCEEB00D902DF /* Data.swift */; };
+		1327189B207A9D6A009692D8 /* utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1327189A207A9D6A009692D8 /* utilities.swift */; };
+		139FF4A2207915CF00D936DE /* QuotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FF4A1207915CD00D936DE /* QuotesView.swift */; };
 		340DE24A2601626730ADD649 /* Pods_Pquotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87297BB3B24C65E182E8FA30 /* Pods_Pquotes.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		083A1E2D206CDAE10000D6B2 /* comments.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = comments.json; sourceTree = "<group>"; };
-		083A1E30206CDBAF0000D6B2 /* PodFile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PodFile; sourceTree = "<group>"; };
-		08A347DB20721C0600C63150 /* AuthorQuotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorQuotesViewController.swift; sourceTree = "<group>"; };
-		08A347DC20721C0600C63150 /* AuthorQuotesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AuthorQuotesViewController.xib; sourceTree = "<group>"; };
+		083A1E30206CDBAF0000D6B2 /* PodFile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PodFile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		08A40175206CCBC200D902DF /* Pquotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pquotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08A40178206CCBC200D902DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08A4017A206CCBC200D902DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,6 +31,8 @@
 		08A40182206CCBC200D902DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08A40184206CCBC200D902DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08A4018B206CCEEB00D902DF /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		1327189A207A9D6A009692D8 /* utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utilities.swift; sourceTree = "<group>"; };
+		139FF4A1207915CD00D936DE /* QuotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesView.swift; sourceTree = "<group>"; };
 		69B17A618A0DA02D9984C4BD /* Pods-Pquotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pquotes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pquotes/Pods-Pquotes.release.xcconfig"; sourceTree = "<group>"; };
 		87297BB3B24C65E182E8FA30 /* Pods_Pquotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pquotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B5EA542275677032B927057 /* Pods-Pquotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pquotes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pquotes/Pods-Pquotes.debug.xcconfig"; sourceTree = "<group>"; };
@@ -75,13 +75,13 @@
 				08A40178206CCBC200D902DF /* AppDelegate.swift */,
 				08A4017A206CCBC200D902DF /* ViewController.swift */,
 				08A4017C206CCBC200D902DF /* Main.storyboard */,
+				139FF4A1207915CD00D936DE /* QuotesView.swift */,
+				1327189A207A9D6A009692D8 /* utilities.swift */,
 				08A4017F206CCBC200D902DF /* Assets.xcassets */,
 				08A40181206CCBC200D902DF /* LaunchScreen.storyboard */,
 				08A40184206CCBC200D902DF /* Info.plist */,
 				08A4018B206CCEEB00D902DF /* Data.swift */,
 				083A1E2D206CDAE10000D6B2 /* comments.json */,
-				08A347DB20721C0600C63150 /* AuthorQuotesViewController.swift */,
-				08A347DC20721C0600C63150 /* AuthorQuotesViewController.xib */,
 			);
 			path = Pquotes;
 			sourceTree = "<group>";
@@ -138,7 +138,7 @@
 				TargetAttributes = {
 					08A40174206CCBC200D902DF = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 8XN8XBM94V;
+						DevelopmentTeam = EX4A386PXY;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -170,7 +170,6 @@
 				08A40183206CCBC200D902DF /* LaunchScreen.storyboard in Resources */,
 				08A40180206CCBC200D902DF /* Assets.xcassets in Resources */,
 				08A4017E206CCBC200D902DF /* Main.storyboard in Resources */,
-				08A347DE20721C0600C63150 /* AuthorQuotesViewController.xib in Resources */,
 				083A1E2E206CDAE10000D6B2 /* comments.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -184,9 +183,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Pquotes/Pods-Pquotes-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -214,13 +216,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pquotes-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -230,8 +235,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08A347DD20721C0600C63150 /* AuthorQuotesViewController.swift in Sources */,
 				08A4017B206CCBC200D902DF /* ViewController.swift in Sources */,
+				1327189B207A9D6A009692D8 /* utilities.swift in Sources */,
+				139FF4A2207915CF00D936DE /* QuotesView.swift in Sources */,
 				08A4018C206CCEEB00D902DF /* Data.swift in Sources */,
 				08A40179206CCBC200D902DF /* AppDelegate.swift in Sources */,
 			);
@@ -359,7 +365,7 @@
 			baseConfigurationReference = 9B5EA542275677032B927057 /* Pods-Pquotes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8XN8XBM94V;
+				DEVELOPMENT_TEAM = EX4A386PXY;
 				INFOPLIST_FILE = Pquotes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yaseen.Pquotes;
@@ -373,7 +379,7 @@
 			baseConfigurationReference = 69B17A618A0DA02D9984C4BD /* Pods-Pquotes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8XN8XBM94V;
+				DEVELOPMENT_TEAM = EX4A386PXY;
 				INFOPLIST_FILE = Pquotes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yaseen.Pquotes;
