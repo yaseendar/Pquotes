@@ -1,0 +1,29 @@
+PODS:
+  - Floaty (3.0.1)
+  - SwiftyJSON (2.3.2)
+
+DEPENDENCIES:
+  - Floaty (~> 3.0.0)
+  - SwiftyJSON (from `https://github.com/acegreen/SwiftyJSON.git`, branch `swift3`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Floaty
+
+EXTERNAL SOURCES:
+  SwiftyJSON:
+    :branch: swift3
+    :git: https://github.com/acegreen/SwiftyJSON.git
+
+CHECKOUT OPTIONS:
+  SwiftyJSON:
+    :commit: 8971384559780e631b041ac91b16734a396d4c14
+    :git: https://github.com/acegreen/SwiftyJSON.git
+
+SPEC CHECKSUMS:
+  Floaty: bb7a353deee9ddcc14c584ca9c538efdc19669f2
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+
+PODFILE CHECKSUM: 9744112c1ab9b5a9f3dcf65d3792f7411c17180d
+
+COCOAPODS: 1.5.3

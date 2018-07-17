@@ -2,6 +2,8 @@ use_frameworks!
 target 'Pquotes' do
 pod 'SwiftyJSON', :git =>'https://github.com/acegreen/SwiftyJSON.git', branch: 'swift3'
 
+use_frameworks!
+pod "Floaty", "~> 3.0.0" # Use version 4.0.0 for Swift 4.0
 end
 
 post_install do |installer|
