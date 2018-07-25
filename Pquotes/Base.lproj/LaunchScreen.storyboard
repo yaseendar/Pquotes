@@ -22,23 +22,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="PQuotes.png" translatesAutoresizingMaskIntoConstraints="NO" id="ooL-5V-0yW">
-                                <rect key="frame" x="127" y="291" width="160" height="124"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Collection Of Famous Quotes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQm-Cb-vyF">
-                                <rect key="frame" x="56.333333333333343" y="641" width="300.66666666666663" height="30.333333333333371"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Collection Of Famous Programming Quotes" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQm-Cb-vyF">
+                                <rect key="frame" x="10" y="596" width="394" height="60.333333333333371"/>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="512.png" translatesAutoresizingMaskIntoConstraints="NO" id="ooL-5V-0yW">
+                                <rect key="frame" x="57" y="160" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="JfA-U9-oa0"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="lQm-Cb-vyF" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="339-DY-XKs"/>
-                            <constraint firstItem="ooL-5V-0yW" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-15" id="6SW-wT-kPA"/>
-                            <constraint firstItem="ooL-5V-0yW" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="15:46" constant="-80" id="JUq-aN-atO"/>
-                            <constraint firstItem="lQm-Cb-vyF" firstAttribute="top" secondItem="ooL-5V-0yW" secondAttribute="bottom" constant="138" id="QJq-Hn-otU"/>
+                            <constraint firstItem="ooL-5V-0yW" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-58" id="6SW-wT-kPA"/>
+                            <constraint firstItem="ooL-5V-0yW" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="15:46" constant="60" id="JUq-aN-atO"/>
+                            <constraint firstItem="lQm-Cb-vyF" firstAttribute="top" secondItem="ooL-5V-0yW" secondAttribute="bottom" constant="136" id="QJq-Hn-otU"/>
+                            <constraint firstItem="lQm-Cb-vyF" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="10" id="QUP-DX-Z7T"/>
                             <constraint firstItem="ooL-5V-0yW" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="QpP-sZ-CXy"/>
+                            <constraint firstAttribute="trailing" secondItem="lQm-Cb-vyF" secondAttribute="trailing" constant="10" id="fg6-hR-zwX"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -48,6 +53,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="PQuotes.png" width="299" height="300"/>
+        <image name="512.png" width="512" height="512"/>
     </resources>
 </document>
