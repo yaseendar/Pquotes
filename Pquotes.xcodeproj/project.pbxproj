@@ -18,6 +18,7 @@
 		08A40183206CCBC200D902DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08A40181206CCBC200D902DF /* LaunchScreen.storyboard */; };
 		08A4018C206CCEEB00D902DF /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A4018B206CCEEB00D902DF /* Data.swift */; };
 		340DE24A2601626730ADD649 /* Pods_Pquotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87297BB3B24C65E182E8FA30 /* Pods_Pquotes.framework */; };
+		6E0F95B1210843BC005F6F45 /* 512.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E0F95B0210843BC005F6F45 /* 512.png */; };
 		6E4A481620FDAF5800E05FAD /* PBack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E4A481120FDAF5800E05FAD /* PBack.jpg */; };
 		6E4A481820FDC8BE00E05FAD /* PQuotes.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E4A481720FDC8BE00E05FAD /* PQuotes.png */; };
 		6E4DEE0820F8E78700D82EDC /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E4DEE0720F8E78700D82EDC /* back.png */; };
@@ -107,6 +108,7 @@
 		08A40184206CCBC200D902DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08A4018B206CCEEB00D902DF /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		69B17A618A0DA02D9984C4BD /* Pods-Pquotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pquotes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pquotes/Pods-Pquotes.release.xcconfig"; sourceTree = "<group>"; };
+		6E0F95B0210843BC005F6F45 /* 512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 512.png; sourceTree = "<group>"; };
 		6E4A481120FDAF5800E05FAD /* PBack.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PBack.jpg; sourceTree = "<group>"; };
 		6E4A481720FDC8BE00E05FAD /* PQuotes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PQuotes.png; sourceTree = "<group>"; };
 		6E4DEE0720F8E78700D82EDC /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				6EAFAD1120F4E61100CFBEDC /* CommentsViewController.swift */,
 				08A4017F206CCBC200D902DF /* Assets.xcassets */,
 				6E4A481720FDC8BE00E05FAD /* PQuotes.png */,
+				6E0F95B0210843BC005F6F45 /* 512.png */,
 				6E4A481120FDAF5800E05FAD /* PBack.jpg */,
 				6E4DEE0720F8E78700D82EDC /* back.png */,
 				6E825E8120F62462003692A2 /* favourite.png */,
@@ -327,6 +330,7 @@
 				6E4A481820FDC8BE00E05FAD /* PQuotes.png in Resources */,
 				08A4017E206CCBC200D902DF /* Main.storyboard in Resources */,
 				08A347DE20721C0600C63150 /* AuthorQuotesViewController.xib in Resources */,
+				6E0F95B1210843BC005F6F45 /* 512.png in Resources */,
 				6E4DEE0820F8E78700D82EDC /* back.png in Resources */,
 				083A1E2E206CDAE10000D6B2 /* comments.json in Resources */,
 				6E825E8220F62463003692A2 /* favourite.png in Resources */,
