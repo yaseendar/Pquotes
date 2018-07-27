@@ -111,17 +111,17 @@
                                 </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="skx-Pr-OMg">
-                                <rect key="frame" x="236" y="587" width="30" height="60"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <state key="normal" title="&gt;"/>
+                                <rect key="frame" x="220" y="587" width="46" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="next&gt;"/>
                                 <connections>
                                     <action selector="nextButtonClicked:" destination="Fgf-5c-y3h" eventType="touchUpInside" id="jv0-Ux-Ige"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gE4-bR-dwJ">
-                                <rect key="frame" x="98" y="587" width="30" height="56"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <state key="normal" title="&lt;"/>
+                                <rect key="frame" x="98" y="587" width="38" height="56"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="&lt;pre"/>
                                 <connections>
                                     <action selector="prevButtonClicked:" destination="Fgf-5c-y3h" eventType="touchUpInside" id="BwP-XF-yhe"/>
                                 </connections>
