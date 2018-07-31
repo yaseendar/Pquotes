@@ -15,7 +15,8 @@ class CommentsViewController: UIViewController{
     
     //Declarations here...
    
-   
+    @IBOutlet weak var showingLabel: UILabel!
+    
     
     @IBOutlet weak var navigationTitleItem: UINavigationItem!
     @IBOutlet weak var navigationBar: UINavigationBar!
@@ -99,6 +100,7 @@ class CommentsViewController: UIViewController{
                 if count == 1{
                     prevButton.isHidden = false
                 }
+        showingLabel.text = "Showing \(count+1) of \(quotes!.count)"
     }
 
 
@@ -116,6 +118,7 @@ class CommentsViewController: UIViewController{
                            if count > quotes!.count-1{
                             nextButton.isHidden = false
                             }
+           showingLabel.text = "Showing \(count+1) of \(quotes!.count)"
     }
     
    
@@ -170,9 +173,22 @@ class CommentsViewController: UIViewController{
             }
             
             //Prompting user...........
-            let alert = UIAlertController(title: "Done!", message: "Added to favourites...", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+            let alert = UIAlertController(title: "", message: "Added to favourites...", preferredStyle: .alert)
+            
+            //for dismissing alertview on background tap...
+            self.present(alert, animated: true) {
+                alert.view.superview?.isUserInteractionEnabled = true
+                alert.view.superview?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.alertControllerBackgroundTapped)))
+            }
+            
+            //for dismissing alert automatically after 2 seconds...
+            let when = DispatchTime.now() + 2
+            DispatchQueue.main.asyncAfter(deadline: when){
+                alert.dismiss(animated: true, completion: nil)
+            }
+            
+            //alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+           // self.present(alert, animated: true, completion: nil)
             floaty.close()
         })
         
@@ -200,9 +216,12 @@ class CommentsViewController: UIViewController{
                 
                 quotes = commentString
                
-
-                
                 commentLabel.text = " \" \(commentString[0])\" "
+                
+                showingLabel.text  = "Showing 1 of \(commentString.count)"
+                if(commentString.count == 1){
+                showingLabel.isHidden = true
+                }
                 
                 //Checking if there are more than one quote by an author....
                 if commentString.count>1{
@@ -219,10 +238,13 @@ class CommentsViewController: UIViewController{
         }
  //--------------------------------------------------------------------------------------
         
-        
-
-       
+    }
     
+    
+    //function for dismissing alertview on background tap....
+    func alertControllerBackgroundTapped()
+    {
+        self.dismiss(animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {

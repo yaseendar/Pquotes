@@ -76,6 +76,22 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelega
    //     self.performSegue(withIdentifier: "CommentsViewController", sender: self)
         
     }
+    
+    // Called when search bar obtains focus.  I.e., user taps
+    // on the search bar to enter text.
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = true
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = nil
+        searchBar.showsCancelButton = false
+        
+        // Remove focus from the search bar.
+        searchBar.endEditing(true)
+        filteredData = data
+      tableView.reloadData()
+    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
       

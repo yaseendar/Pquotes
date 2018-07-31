@@ -24,7 +24,7 @@
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="cBz-iR-761">
                                 <rect key="frame" x="0.0" y="30" width="375" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1oV-Bh-a5P">
                                 <rect key="frame" x="0.0" y="86" width="375" height="581"/>
@@ -87,9 +87,8 @@
                                         <color key="textColor" red="0.28960125363398947" green="0.29468590352659235" blue="0.31837877598121822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rfc-kS-VKS">
+                                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rfc-kS-VKS">
                                         <rect key="frame" x="0.0" y="0.0" width="355" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <items>
                                             <navigationItem title="PQuotes" id="OFY-gC-XK2">
                                                 <barButtonItem key="leftBarButtonItem" title="back" image="back" id="1vX-qG-ImK">
@@ -100,52 +99,63 @@
                                             </navigationItem>
                                         </items>
                                     </navigationBar>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cc1-Z5-1MB">
+                                        <rect key="frame" x="217" y="54" width="130" height="30"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
+                                        <state key="normal" title="About the Author..."/>
+                                        <connections>
+                                            <action selector="authorInfoButtonClicked:" destination="Fgf-5c-y3h" eventType="touchUpInside" id="Y33-C5-4NF"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="E2j-km-8Cn" secondAttribute="bottom" constant="10" id="1LL-8r-uuc"/>
+                                    <constraint firstItem="rfc-kS-VKS" firstAttribute="top" secondItem="S2m-Gr-mKQ" secondAttribute="top" id="5JN-9p-Qm9"/>
                                     <constraint firstItem="E2j-km-8Cn" firstAttribute="height" secondItem="S2m-Gr-mKQ" secondAttribute="height" constant="-34" id="9cY-Hq-TwC"/>
+                                    <constraint firstAttribute="trailing" secondItem="rfc-kS-VKS" secondAttribute="trailing" id="N8c-za-egH"/>
+                                    <constraint firstItem="cc1-Z5-1MB" firstAttribute="top" secondItem="rfc-kS-VKS" secondAttribute="bottom" constant="10" id="Q4t-ko-ZIT"/>
                                     <constraint firstItem="E2j-km-8Cn" firstAttribute="width" secondItem="S2m-Gr-mKQ" secondAttribute="width" id="Qdn-Px-EGV"/>
                                     <constraint firstItem="E2j-km-8Cn" firstAttribute="trailing" secondItem="S2m-Gr-mKQ" secondAttribute="trailingMargin" constant="8" id="VGa-sk-oNA"/>
+                                    <constraint firstItem="rfc-kS-VKS" firstAttribute="leading" secondItem="S2m-Gr-mKQ" secondAttribute="leading" id="Xca-4I-EnZ"/>
                                     <constraint firstItem="E2j-km-8Cn" firstAttribute="leading" secondItem="S2m-Gr-mKQ" secondAttribute="leading" id="hDZ-cS-Dh9"/>
                                     <constraint firstItem="E2j-km-8Cn" firstAttribute="top" secondItem="S2m-Gr-mKQ" secondAttribute="top" constant="44" id="ul3-rW-zze"/>
                                 </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="skx-Pr-OMg">
-                                <rect key="frame" x="236" y="587" width="30" height="60"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <state key="normal" title="&gt;"/>
+                                <rect key="frame" x="220" y="587" width="46" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="next&gt;"/>
                                 <connections>
                                     <action selector="nextButtonClicked:" destination="Fgf-5c-y3h" eventType="touchUpInside" id="jv0-Ux-Ige"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gE4-bR-dwJ">
-                                <rect key="frame" x="98" y="587" width="30" height="56"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <state key="normal" title="&lt;"/>
+                                <rect key="frame" x="98" y="587" width="38" height="56"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="&lt;pre"/>
                                 <connections>
                                     <action selector="prevButtonClicked:" destination="Fgf-5c-y3h" eventType="touchUpInside" id="BwP-XF-yhe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cc1-Z5-1MB">
-                                <rect key="frame" x="16" y="537" width="130" height="30"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
-                                <state key="normal" title="About the Author..."/>
-                                <connections>
-                                    <action selector="authorInfoButtonClicked:" destination="Fgf-5c-y3h" eventType="touchUpInside" id="Y33-C5-4NF"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Showing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UwN-eI-OeD">
+                                <rect key="frame" x="154" y="562" width="66" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.13333333333333333" green="0.49019607843137253" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.93325155973434448" green="0.93338567018508911" blue="0.93322223424911499" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="S2m-Gr-mKQ" secondAttribute="trailing" constant="10" id="25P-Qa-ng6"/>
                             <constraint firstItem="S2m-Gr-mKQ" firstAttribute="leading" secondItem="65u-aq-o0C" secondAttribute="leading" constant="10" id="2k1-Wi-gSJ"/>
-                            <constraint firstItem="cc1-Z5-1MB" firstAttribute="leading" secondItem="65u-aq-o0C" secondAttribute="leading" constant="16" id="3p0-1D-YWR"/>
                             <constraint firstAttribute="bottom" secondItem="S2m-Gr-mKQ" secondAttribute="bottom" constant="100" id="6oH-um-CFa"/>
                             <constraint firstItem="S2m-Gr-mKQ" firstAttribute="top" secondItem="65u-aq-o0C" secondAttribute="top" constant="30" id="HdG-m5-EBn"/>
                             <constraint firstItem="skx-Pr-OMg" firstAttribute="top" secondItem="gE4-bR-dwJ" secondAttribute="top" id="JZe-dk-fYo"/>
                             <constraint firstItem="cWs-E4-kwW" firstAttribute="top" secondItem="gE4-bR-dwJ" secondAttribute="bottom" constant="24" id="NpA-uv-ZiJ"/>
-                            <constraint firstItem="gE4-bR-dwJ" firstAttribute="top" secondItem="cc1-Z5-1MB" secondAttribute="bottom" constant="20" id="RQw-V5-T12"/>
+                            <constraint firstAttribute="trailing" secondItem="cc1-Z5-1MB" secondAttribute="trailing" constant="18" id="Tv5-fU-JVf"/>
+                            <constraint firstItem="UwN-eI-OeD" firstAttribute="centerX" secondItem="65u-aq-o0C" secondAttribute="centerX" id="ZEg-q9-0x2"/>
                             <constraint firstItem="cWs-E4-kwW" firstAttribute="top" secondItem="skx-Pr-OMg" secondAttribute="bottom" constant="20" id="asv-AN-ltB"/>
+                            <constraint firstItem="cWs-E4-kwW" firstAttribute="top" secondItem="UwN-eI-OeD" secondAttribute="bottom" constant="84" id="msR-aD-4oy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="skx-Pr-OMg" secondAttribute="trailing" constant="93" id="mwz-oZ-olf"/>
                             <constraint firstItem="skx-Pr-OMg" firstAttribute="top" secondItem="S2m-Gr-mKQ" secondAttribute="bottom" constant="20" id="r5l-F0-lGG"/>
                             <constraint firstItem="gE4-bR-dwJ" firstAttribute="leading" secondItem="65u-aq-o0C" secondAttribute="leadingMargin" constant="82" id="tSk-8h-jTD"/>
@@ -158,6 +168,7 @@
                         <outlet property="nextButton" destination="skx-Pr-OMg" id="SOv-bo-b61"/>
                         <outlet property="prevButton" destination="gE4-bR-dwJ" id="Lld-tr-Co6"/>
                         <outlet property="scrollView" destination="S2m-Gr-mKQ" id="TEV-vz-aed"/>
+                        <outlet property="showingLabel" destination="UwN-eI-OeD" id="WGO-Ph-qVM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X3z-g5-GTf" userLabel="First Responder" sceneMemberID="firstResponder"/>
