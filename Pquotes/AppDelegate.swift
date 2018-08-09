@@ -8,6 +8,8 @@
 
 import UIKit
 import UserNotifications
+import Firebase
+import Fabric
 
 @available(iOS 10.0, *)
 @UIApplicationMain
@@ -21,7 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate , UNUserNotificationCenter
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 
-        
+        FirebaseApp.configure()
+        Fabric.sharedSDK().debug = true
+
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = UIStoryboard(name: "LaunchScreen", bundle: nil).instantiateInitialViewController()
@@ -66,7 +70,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate , UNUserNotificationCenter
             if (authorized && self.defaults.bool(forKey: "quoteFlag")){
                 print("def :\(self.defaults.bool(forKey: "quoteFlag"))")
                 
-               // let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: true)
+                //let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: true)
                 var date = DateComponents()
                 date.hour = 12
                 date.minute = 43
@@ -104,6 +108,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate , UNUserNotificationCenter
 
       
     }
+    
+
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

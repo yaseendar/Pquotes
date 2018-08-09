@@ -17,7 +17,12 @@ class FavouritesViewController: UITableViewController {
     var quotesArray:[String] = []
     var authorsArray:[String] = []
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        //for color problem...
+        tableView = nil
+        
         quotesArray = self.defaults.stringArray(forKey: "SavedQuotesArray") ?? [String]()
         authorsArray = self.defaults.stringArray(forKey: "SavedAuthorsArray") ?? [String]()
         //For syncing the text color of table cells...
@@ -30,10 +35,14 @@ class FavouritesViewController: UITableViewController {
             tableView.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
             view.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         }
+        
+        tableView.estimatedRowHeight  = 100
+        tableView.rowHeight = UITableViewAutomaticDimension
         tableView.reloadData()
+        
     }
     
-  
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -60,7 +69,7 @@ class FavouritesViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "favouritesCell", for: indexPath) as!FavouriteQuotesTableViewCell
       
         
-        cell.quotesTextView.text = "\" \(quotesArray[indexPath.row]) \""
+        cell.quotesTextView.text = "\(quotesArray[indexPath.row]) "
         cell.authorLabel.text  = "~" + authorsArray[indexPath.row]
         
         cell.layer.borderColor = UIColor.gray.cgColor
@@ -93,11 +102,7 @@ class FavouritesViewController: UITableViewController {
     }
     
     
-    override func viewWillAppear(_ animated: Bool) {
-        tableView.estimatedRowHeight  = 100
-        tableView.rowHeight = UITableViewAutomaticDimension
-    }
-
+  
     
     /*
     // MARK: - Navigation

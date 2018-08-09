@@ -10,13 +10,13 @@ import UIKit
 
 class FavouriteQuotesTableViewCell: UITableViewCell {
 
-  
+    @IBOutlet weak var contentCell: UIView!
+    
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var quotesTextView: UITextView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
