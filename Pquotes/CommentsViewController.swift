@@ -50,7 +50,7 @@ class CommentsViewController: UIViewController{
         alert.view.addConstraint(height);
         alert.view.frame.size.height = self.view.frame.height * 0.90
         
-        let web = UIWebView(frame: CGRect(x: 10, y: 10, width: self.view.frame.size.width * 0.9 , height: self.view.frame.size.height * 0.8))
+        let web = UIWebView(frame: CGRect(x: 10, y: 5, width: self.view.frame.size.width * 0.9 , height: self.view.frame.size.height * 0.8))
         
         web.isOpaque = false;
         web.backgroundColor = UIColor.clear
@@ -67,9 +67,8 @@ class CommentsViewController: UIViewController{
         
         alert.view.addSubview(web)
         
-      
-        
         alert.addAction(UIAlertAction(title: "Got It", style: .default, handler: nil))
+        
         self.present(alert, animated: true, completion: nil)
         
        

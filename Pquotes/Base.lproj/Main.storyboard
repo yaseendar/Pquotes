@@ -38,7 +38,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Fgf-5c-y3h" kind="presentation" identifier="CommentsViewController" modalTransitionStyle="partialCurl" id="nVD-qd-X8R"/>
+                                            <segue destination="Fgf-5c-y3h" kind="presentation" identifier="CommentsViewController" modalTransitionStyle="crossDissolve" id="nVD-qd-X8R"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -67,7 +67,7 @@
         <!--Comments View Controller-->
         <scene sceneID="a4d-O7-oiZ">
             <objects>
-                <viewController id="Fgf-5c-y3h" customClass="CommentsViewController" customModule="Pquotes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CommentsViewController" id="Fgf-5c-y3h" customClass="CommentsViewController" customModule="Pquotes" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6PG-p8-B7H"/>
                         <viewControllerLayoutGuide type="bottom" id="cWs-E4-kwW"/>
@@ -77,13 +77,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S2m-Gr-mKQ">
-                                <rect key="frame" x="10" y="30" width="355" height="537"/>
+                                <rect key="frame" x="10" y="30" width="355" height="517"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2j-km-8Cn">
-                                        <rect key="frame" x="0.0" y="44" width="355" height="503"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2j-km-8Cn">
+                                        <rect key="frame" x="0.0" y="100" width="347" height="390"/>
                                         <color key="backgroundColor" red="0.28960125363398947" green="0.29468590352659235" blue="0.31837877598121822" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <string key="text">Two centuries ago Leibnitz invented a calculating machine which embodied most of the essential features of recent keyboard devices, but it could not then come into use. The economics of the situation were against it.", "Whenever logical processes of thought are employed, there is an opportunity for the machine.", "If scientific reasoning were limited to the logical processes of arithmetic, we should not get very far in our understanding of the physical world. One might as well attempt to grasp the game of poker entirely by the use of the mathematics of probability.</string>
-                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="22"/>
                                         <color key="textColor" red="0.28960125363398947" green="0.29468590352659235" blue="0.31837877598121822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -109,20 +109,21 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="E2j-km-8Cn" secondAttribute="bottom" constant="10" id="1LL-8r-uuc"/>
+                                    <constraint firstAttribute="bottom" secondItem="E2j-km-8Cn" secondAttribute="bottom" constant="27" id="1LL-8r-uuc"/>
                                     <constraint firstItem="rfc-kS-VKS" firstAttribute="top" secondItem="S2m-Gr-mKQ" secondAttribute="top" id="5JN-9p-Qm9"/>
-                                    <constraint firstItem="E2j-km-8Cn" firstAttribute="height" secondItem="S2m-Gr-mKQ" secondAttribute="height" constant="-34" id="9cY-Hq-TwC"/>
+                                    <constraint firstItem="E2j-km-8Cn" firstAttribute="height" secondItem="S2m-Gr-mKQ" secondAttribute="height" constant="-127" id="9cY-Hq-TwC"/>
                                     <constraint firstAttribute="trailing" secondItem="rfc-kS-VKS" secondAttribute="trailing" id="N8c-za-egH"/>
                                     <constraint firstItem="cc1-Z5-1MB" firstAttribute="top" secondItem="rfc-kS-VKS" secondAttribute="bottom" constant="10" id="Q4t-ko-ZIT"/>
-                                    <constraint firstItem="E2j-km-8Cn" firstAttribute="width" secondItem="S2m-Gr-mKQ" secondAttribute="width" id="Qdn-Px-EGV"/>
-                                    <constraint firstItem="E2j-km-8Cn" firstAttribute="trailing" secondItem="S2m-Gr-mKQ" secondAttribute="trailingMargin" constant="8" id="VGa-sk-oNA"/>
+                                    <constraint firstItem="E2j-km-8Cn" firstAttribute="width" secondItem="S2m-Gr-mKQ" secondAttribute="width" constant="-8" id="Qdn-Px-EGV"/>
+                                    <constraint firstItem="E2j-km-8Cn" firstAttribute="trailing" secondItem="S2m-Gr-mKQ" secondAttribute="trailingMargin" id="VGa-sk-oNA"/>
                                     <constraint firstItem="rfc-kS-VKS" firstAttribute="leading" secondItem="S2m-Gr-mKQ" secondAttribute="leading" id="Xca-4I-EnZ"/>
                                     <constraint firstItem="E2j-km-8Cn" firstAttribute="leading" secondItem="S2m-Gr-mKQ" secondAttribute="leading" id="hDZ-cS-Dh9"/>
-                                    <constraint firstItem="E2j-km-8Cn" firstAttribute="top" secondItem="S2m-Gr-mKQ" secondAttribute="top" constant="44" id="ul3-rW-zze"/>
+                                    <constraint firstItem="E2j-km-8Cn" firstAttribute="top" secondItem="S2m-Gr-mKQ" secondAttribute="top" constant="100" id="ul3-rW-zze"/>
                                 </constraints>
+                                <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="-30" maxY="0.0"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="skx-Pr-OMg">
-                                <rect key="frame" x="220" y="587" width="46" height="60"/>
+                                <rect key="frame" x="220" y="567" width="46" height="90"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="next&gt;"/>
                                 <connections>
@@ -130,16 +131,16 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gE4-bR-dwJ">
-                                <rect key="frame" x="98" y="587" width="38" height="56"/>
+                                <rect key="frame" x="98" y="567" width="38" height="90"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="&lt;pre"/>
                                 <connections>
                                     <action selector="prevButtonClicked:" destination="Fgf-5c-y3h" eventType="touchUpInside" id="BwP-XF-yhe"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Showing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UwN-eI-OeD">
-                                <rect key="frame" x="154" y="562" width="66" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Showing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UwN-eI-OeD">
+                                <rect key="frame" x="20" y="566" width="55.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.13333333333333333" green="0.49019607843137253" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -148,13 +149,13 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="S2m-Gr-mKQ" secondAttribute="trailing" constant="10" id="25P-Qa-ng6"/>
                             <constraint firstItem="S2m-Gr-mKQ" firstAttribute="leading" secondItem="65u-aq-o0C" secondAttribute="leading" constant="10" id="2k1-Wi-gSJ"/>
-                            <constraint firstAttribute="bottom" secondItem="S2m-Gr-mKQ" secondAttribute="bottom" constant="100" id="6oH-um-CFa"/>
+                            <constraint firstAttribute="bottom" secondItem="S2m-Gr-mKQ" secondAttribute="bottom" constant="120" id="6oH-um-CFa"/>
                             <constraint firstItem="S2m-Gr-mKQ" firstAttribute="top" secondItem="65u-aq-o0C" secondAttribute="top" constant="30" id="HdG-m5-EBn"/>
                             <constraint firstItem="skx-Pr-OMg" firstAttribute="top" secondItem="gE4-bR-dwJ" secondAttribute="top" id="JZe-dk-fYo"/>
-                            <constraint firstItem="cWs-E4-kwW" firstAttribute="top" secondItem="gE4-bR-dwJ" secondAttribute="bottom" constant="24" id="NpA-uv-ZiJ"/>
+                            <constraint firstItem="cWs-E4-kwW" firstAttribute="top" secondItem="gE4-bR-dwJ" secondAttribute="bottom" constant="10" id="NpA-uv-ZiJ"/>
+                            <constraint firstItem="UwN-eI-OeD" firstAttribute="leading" secondItem="65u-aq-o0C" secondAttribute="leading" constant="20" id="OLP-Xi-6P0"/>
                             <constraint firstAttribute="trailing" secondItem="cc1-Z5-1MB" secondAttribute="trailing" constant="18" id="Tv5-fU-JVf"/>
-                            <constraint firstItem="UwN-eI-OeD" firstAttribute="centerX" secondItem="65u-aq-o0C" secondAttribute="centerX" id="ZEg-q9-0x2"/>
-                            <constraint firstItem="cWs-E4-kwW" firstAttribute="top" secondItem="skx-Pr-OMg" secondAttribute="bottom" constant="20" id="asv-AN-ltB"/>
+                            <constraint firstItem="cWs-E4-kwW" firstAttribute="top" secondItem="skx-Pr-OMg" secondAttribute="bottom" constant="10" id="asv-AN-ltB"/>
                             <constraint firstItem="cWs-E4-kwW" firstAttribute="top" secondItem="UwN-eI-OeD" secondAttribute="bottom" constant="84" id="msR-aD-4oy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="skx-Pr-OMg" secondAttribute="trailing" constant="93" id="mwz-oZ-olf"/>
                             <constraint firstItem="skx-Pr-OMg" firstAttribute="top" secondItem="S2m-Gr-mKQ" secondAttribute="bottom" constant="20" id="r5l-F0-lGG"/>
@@ -178,7 +179,7 @@
         <!--Favourites View Controller-->
         <scene sceneID="xXM-E1-gf2">
             <objects>
-                <tableViewController storyboardIdentifier="FavouritesViewController" modalTransitionStyle="partialCurl" id="EZp-oV-9sC" customClass="FavouritesViewController" customModule="Pquotes" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="FavouritesViewController" modalTransitionStyle="crossDissolve" id="EZp-oV-9sC" customClass="FavouritesViewController" customModule="Pquotes" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ibC-fy-hZw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
