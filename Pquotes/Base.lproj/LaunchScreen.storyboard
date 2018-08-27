@@ -22,9 +22,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Collection Of Famous Programming Quotes" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQm-Cb-vyF">
-                                <rect key="frame" x="10" y="570" width="394" height="60.333333333333371"/>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Collection Of 499 Famous Programming Quotes" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQm-Cb-vyF">
+                                <rect key="frame" x="10" y="550" width="394" height="58"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -40,7 +40,7 @@
                             <constraint firstItem="lQm-Cb-vyF" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="339-DY-XKs"/>
                             <constraint firstItem="ooL-5V-0yW" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-58" id="6SW-wT-kPA"/>
                             <constraint firstItem="ooL-5V-0yW" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="15:46" constant="60" id="JUq-aN-atO"/>
-                            <constraint firstItem="lQm-Cb-vyF" firstAttribute="top" secondItem="ooL-5V-0yW" secondAttribute="bottom" constant="110" id="QJq-Hn-otU"/>
+                            <constraint firstItem="lQm-Cb-vyF" firstAttribute="top" secondItem="ooL-5V-0yW" secondAttribute="bottom" constant="90" id="QJq-Hn-otU"/>
                             <constraint firstItem="lQm-Cb-vyF" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="10" id="QUP-DX-Z7T"/>
                             <constraint firstItem="ooL-5V-0yW" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="QpP-sZ-CXy"/>
                             <constraint firstAttribute="trailing" secondItem="lQm-Cb-vyF" secondAttribute="trailing" constant="10" id="fg6-hR-zwX"/>

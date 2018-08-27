@@ -19,6 +19,9 @@
 		08A4018C206CCEEB00D902DF /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A4018B206CCEEB00D902DF /* Data.swift */; };
 		340DE24A2601626730ADD649 /* Pods_Pquotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87297BB3B24C65E182E8FA30 /* Pods_Pquotes.framework */; };
 		6E0F95B1210843BC005F6F45 /* 512.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E0F95B0210843BC005F6F45 /* 512.png */; };
+		6E112DE92125422000026206 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E112DE82125422000026206 /* Theme.swift */; };
+		6E112DEF212542C600026206 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E112DEE212542C600026206 /* SettingsViewController.swift */; };
+		6E1C3EAE212A906D00B98A49 /* ControllerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1C3EAD212A906D00B98A49 /* ControllerViewCell.swift */; };
 		6E4A481620FDAF5800E05FAD /* PBack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E4A481120FDAF5800E05FAD /* PBack.jpg */; };
 		6E4A481820FDC8BE00E05FAD /* PQuotes.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E4A481720FDC8BE00E05FAD /* PQuotes.png */; };
 		6E4DEE0820F8E78700D82EDC /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E4DEE0720F8E78700D82EDC /* back.png */; };
@@ -26,59 +29,21 @@
 		6E62987C20F612160087EBB1 /* Amsterdam Personal Use.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E62987B20F612160087EBB1 /* Amsterdam Personal Use.ttf */; };
 		6E62987F20F612360087EBB1 /* Beautiful People Personal Use.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E62987D20F612350087EBB1 /* Beautiful People Personal Use.ttf */; };
 		6E62988020F612360087EBB1 /* Beautiful People two Personal Use.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E62987E20F612360087EBB1 /* Beautiful People two Personal Use.ttf */; };
+		6E76AF4E2122B943008D100A /* icons8-home-64.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E76AF4B2122B942008D100A /* icons8-home-64.png */; };
+		6E76AF4F2122B943008D100A /* icons8-settings-64.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E76AF4C2122B942008D100A /* icons8-settings-64.png */; };
+		6E76AF502122B943008D100A /* icons8-favorite-folder-64.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E76AF4D2122B942008D100A /* icons8-favorite-folder-64.png */; };
+		6E76AF542122DFDD008D100A /* icons8-pre-page-64.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E76AF512122DFDB008D100A /* icons8-pre-page-64.png */; };
+		6E76AF552122DFDD008D100A /* icons8-next-page-64 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E76AF522122DFDC008D100A /* icons8-next-page-64 copy.png */; };
+		6E76AF562122DFDD008D100A /* icons8-share-64.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E76AF532122DFDC008D100A /* icons8-share-64.png */; };
+		6E76AF582122E0E9008D100A /* icons8-next-button-64.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E76AF572122E0E9008D100A /* icons8-next-button-64.png */; };
+		6E76AF5C2122E1AF008D100A /* icons8-pre-button-64-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E76AF5B2122E1AE008D100A /* icons8-pre-button-64-2.png */; };
+		6E76AF5E2122E1C2008D100A /* icons8-next-button-64-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E76AF5D2122E1C2008D100A /* icons8-next-button-64-2.png */; };
 		6E825E8220F62463003692A2 /* favourite.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E825E8120F62462003692A2 /* favourite.png */; };
-		6E9CB07D20FC7F3B00743345 /* WikipediaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9CB07620FC7EEE00743345 /* WikipediaKit.framework */; };
-		6E9CB07E20FC7F5100743345 /* WikipediaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9CB07620FC7EEE00743345 /* WikipediaKit.framework */; };
-		6E9CB07F20FC7F5100743345 /* WikipediaKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9CB07620FC7EEE00743345 /* WikipediaKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6E9F88142133C6C9004F8202 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9F88132133C6C9004F8202 /* SettingsTableViewCell.swift */; };
 		6EA69EAA20F7533700490CF8 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA69EA920F7533700490CF8 /* FavouritesViewController.swift */; };
 		6EA69EAC20F778A200490CF8 /* FavouriteQuotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA69EAB20F778A200490CF8 /* FavouriteQuotesTableViewCell.swift */; };
 		6EAFAD1220F4E61100CFBEDC /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAFAD1120F4E61100CFBEDC /* CommentsViewController.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		6E9CB07320FC7EEE00743345 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6E9CB06B20FC7EEE00743345 /* WikipediaKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 27E365081E81757500F39F78;
-			remoteInfo = "WikipediaKit-macOS";
-		};
-		6E9CB07520FC7EEE00743345 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6E9CB06B20FC7EEE00743345 /* WikipediaKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 27E365471E81AC6A00F39F78;
-			remoteInfo = "WikipediaKit-iOS";
-		};
-		6E9CB07720FC7EEE00743345 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6E9CB06B20FC7EEE00743345 /* WikipediaKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 27E3658A1E81C95D00F39F78;
-			remoteInfo = "WikipediaKit-watchOS";
-		};
-		6E9CB07920FC7EEE00743345 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6E9CB06B20FC7EEE00743345 /* WikipediaKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 27E365AC1E81C9E300F39F78;
-			remoteInfo = "WikipediaKit-tvOS";
-		};
-		6E9CB07B20FC7EEE00743345 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6E9CB06B20FC7EEE00743345 /* WikipediaKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 274EFCDD1EB899E90047428B;
-			remoteInfo = WikipediaKitTests;
-		};
-		6E9CB08020FC7F5100743345 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6E9CB06B20FC7EEE00743345 /* WikipediaKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 27E365461E81AC6A00F39F78;
-			remoteInfo = "WikipediaKit-iOS";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		6E9CB08220FC7F5200743345 /* Embed Frameworks */ = {
@@ -87,9 +52,18 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6E9CB07F20FC7F5100743345 /* WikipediaKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EF6424E2126E52700FB27E8 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -109,6 +83,9 @@
 		08A4018B206CCEEB00D902DF /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		69B17A618A0DA02D9984C4BD /* Pods-Pquotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pquotes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pquotes/Pods-Pquotes.release.xcconfig"; sourceTree = "<group>"; };
 		6E0F95B0210843BC005F6F45 /* 512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 512.png; sourceTree = "<group>"; };
+		6E112DE82125422000026206 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		6E112DEE212542C600026206 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		6E1C3EAD212A906D00B98A49 /* ControllerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerViewCell.swift; sourceTree = "<group>"; };
 		6E4A481120FDAF5800E05FAD /* PBack.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PBack.jpg; sourceTree = "<group>"; };
 		6E4A481720FDC8BE00E05FAD /* PQuotes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PQuotes.png; sourceTree = "<group>"; };
 		6E4DEE0720F8E78700D82EDC /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
@@ -116,8 +93,17 @@
 		6E62987B20F612160087EBB1 /* Amsterdam Personal Use.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amsterdam Personal Use.ttf"; sourceTree = "<group>"; };
 		6E62987D20F612350087EBB1 /* Beautiful People Personal Use.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Beautiful People Personal Use.ttf"; sourceTree = "<group>"; };
 		6E62987E20F612360087EBB1 /* Beautiful People two Personal Use.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Beautiful People two Personal Use.ttf"; sourceTree = "<group>"; };
+		6E76AF4B2122B942008D100A /* icons8-home-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-home-64.png"; sourceTree = "<group>"; };
+		6E76AF4C2122B942008D100A /* icons8-settings-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-settings-64.png"; sourceTree = "<group>"; };
+		6E76AF4D2122B942008D100A /* icons8-favorite-folder-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-favorite-folder-64.png"; sourceTree = "<group>"; };
+		6E76AF512122DFDB008D100A /* icons8-pre-page-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-pre-page-64.png"; sourceTree = "<group>"; };
+		6E76AF522122DFDC008D100A /* icons8-next-page-64 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-next-page-64 copy.png"; sourceTree = "<group>"; };
+		6E76AF532122DFDC008D100A /* icons8-share-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-share-64.png"; sourceTree = "<group>"; };
+		6E76AF572122E0E9008D100A /* icons8-next-button-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-next-button-64.png"; sourceTree = "<group>"; };
+		6E76AF5B2122E1AE008D100A /* icons8-pre-button-64-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-pre-button-64-2.png"; sourceTree = "<group>"; };
+		6E76AF5D2122E1C2008D100A /* icons8-next-button-64-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-next-button-64-2.png"; sourceTree = "<group>"; };
 		6E825E8120F62462003692A2 /* favourite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favourite.png; sourceTree = "<group>"; };
-		6E9CB06B20FC7EEE00743345 /* WikipediaKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WikipediaKit.xcodeproj; path = "../../Downloads/WikipediaKit-master/WikipediaKit.xcodeproj"; sourceTree = "<group>"; };
+		6E9F88132133C6C9004F8202 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		6EA69EA920F7533700490CF8 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
 		6EA69EAB20F778A200490CF8 /* FavouriteQuotesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteQuotesTableViewCell.swift; sourceTree = "<group>"; };
 		6EAFAD1120F4E61100CFBEDC /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
@@ -130,8 +116,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E9CB07E20FC7F5100743345 /* WikipediaKit.framework in Frameworks */,
-				6E9CB07D20FC7F3B00743345 /* WikipediaKit.framework in Frameworks */,
 				340DE24A2601626730ADD649 /* Pods_Pquotes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				083A1E30206CDBAF0000D6B2 /* PodFile */,
-				6E9CB06B20FC7EEE00743345 /* WikipediaKit.xcodeproj */,
 				08A40177206CCBC200D902DF /* Pquotes */,
 				08A40176206CCBC200D902DF /* Products */,
 				1E98799A3EE0EC32E8836D76 /* Pods */,
@@ -163,14 +146,27 @@
 			isa = PBXGroup;
 			children = (
 				08A40178206CCBC200D902DF /* AppDelegate.swift */,
+				6E112DE82125422000026206 /* Theme.swift */,
+				6E112DEE212542C600026206 /* SettingsViewController.swift */,
 				08A4017A206CCBC200D902DF /* ViewController.swift */,
 				08A4017C206CCBC200D902DF /* Main.storyboard */,
+				6E9F88132133C6C9004F8202 /* SettingsTableViewCell.swift */,
 				6EA69EAB20F778A200490CF8 /* FavouriteQuotesTableViewCell.swift */,
+				6E1C3EAD212A906D00B98A49 /* ControllerViewCell.swift */,
 				6EA69EA920F7533700490CF8 /* FavouritesViewController.swift */,
 				6EAFAD1120F4E61100CFBEDC /* CommentsViewController.swift */,
 				08A4017F206CCBC200D902DF /* Assets.xcassets */,
 				6E4A481720FDC8BE00E05FAD /* PQuotes.png */,
 				6E0F95B0210843BC005F6F45 /* 512.png */,
+				6E76AF572122E0E9008D100A /* icons8-next-button-64.png */,
+				6E76AF5B2122E1AE008D100A /* icons8-pre-button-64-2.png */,
+				6E76AF5D2122E1C2008D100A /* icons8-next-button-64-2.png */,
+				6E76AF4D2122B942008D100A /* icons8-favorite-folder-64.png */,
+				6E76AF522122DFDC008D100A /* icons8-next-page-64 copy.png */,
+				6E76AF512122DFDB008D100A /* icons8-pre-page-64.png */,
+				6E76AF532122DFDC008D100A /* icons8-share-64.png */,
+				6E76AF4B2122B942008D100A /* icons8-home-64.png */,
+				6E76AF4C2122B942008D100A /* icons8-settings-64.png */,
 				6E4A481120FDAF5800E05FAD /* PBack.jpg */,
 				6E4DEE0720F8E78700D82EDC /* back.png */,
 				6E825E8120F62462003692A2 /* favourite.png */,
@@ -205,18 +201,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		6E9CB06C20FC7EEE00743345 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6E9CB07420FC7EEE00743345 /* WikipediaKit.framework */,
-				6E9CB07620FC7EEE00743345 /* WikipediaKit.framework */,
-				6E9CB07820FC7EEE00743345 /* WikipediaKit.framework */,
-				6E9CB07A20FC7EEE00743345 /* WikipediaKit.framework */,
-				6E9CB07C20FC7EEE00743345 /* WikipediaKitTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -230,11 +214,11 @@
 				08A40173206CCBC200D902DF /* Resources */,
 				011761600E11310B4B79690C /* [CP] Embed Pods Frameworks */,
 				6E9CB08220FC7F5200743345 /* Embed Frameworks */,
+				6EF6424E2126E52700FB27E8 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				6E9CB08120FC7F5100743345 /* PBXTargetDependency */,
 			);
 			name = Pquotes;
 			productName = Pquotes;
@@ -247,7 +231,7 @@
 		08A4016D206CCBC200D902DF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Yaseen Dar";
 				TargetAttributes = {
@@ -255,6 +239,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 92KR5F4NNS;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -269,56 +258,12 @@
 			mainGroup = 08A4016C206CCBC200D902DF;
 			productRefGroup = 08A40176206CCBC200D902DF /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 6E9CB06C20FC7EEE00743345 /* Products */;
-					ProjectRef = 6E9CB06B20FC7EEE00743345 /* WikipediaKit.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				08A40174206CCBC200D902DF /* Pquotes */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		6E9CB07420FC7EEE00743345 /* WikipediaKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = WikipediaKit.framework;
-			remoteRef = 6E9CB07320FC7EEE00743345 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6E9CB07620FC7EEE00743345 /* WikipediaKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = WikipediaKit.framework;
-			remoteRef = 6E9CB07520FC7EEE00743345 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6E9CB07820FC7EEE00743345 /* WikipediaKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = WikipediaKit.framework;
-			remoteRef = 6E9CB07720FC7EEE00743345 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6E9CB07A20FC7EEE00743345 /* WikipediaKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = WikipediaKit.framework;
-			remoteRef = 6E9CB07920FC7EEE00743345 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6E9CB07C20FC7EEE00743345 /* WikipediaKitTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = WikipediaKitTests.xctest;
-			remoteRef = 6E9CB07B20FC7EEE00743345 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		08A40173206CCBC200D902DF /* Resources */ = {
@@ -328,18 +273,27 @@
 				083A1E31206CDBAF0000D6B2 /* PodFile in Resources */,
 				08A40183206CCBC200D902DF /* LaunchScreen.storyboard in Resources */,
 				08A40180206CCBC200D902DF /* Assets.xcassets in Resources */,
+				6E76AF4F2122B943008D100A /* icons8-settings-64.png in Resources */,
 				6E4A481820FDC8BE00E05FAD /* PQuotes.png in Resources */,
 				08A4017E206CCBC200D902DF /* Main.storyboard in Resources */,
 				08A347DE20721C0600C63150 /* AuthorQuotesViewController.xib in Resources */,
+				6E76AF4E2122B943008D100A /* icons8-home-64.png in Resources */,
 				6E0F95B1210843BC005F6F45 /* 512.png in Resources */,
 				6E4DEE0820F8E78700D82EDC /* back.png in Resources */,
+				6E76AF562122DFDD008D100A /* icons8-share-64.png in Resources */,
 				083A1E2E206CDAE10000D6B2 /* comments.json in Resources */,
+				6E76AF542122DFDD008D100A /* icons8-pre-page-64.png in Resources */,
+				6E76AF5E2122E1C2008D100A /* icons8-next-button-64-2.png in Resources */,
 				6E825E8220F62463003692A2 /* favourite.png in Resources */,
 				6E4A481620FDAF5800E05FAD /* PBack.jpg in Resources */,
 				6E62988020F612360087EBB1 /* Beautiful People two Personal Use.ttf in Resources */,
+				6E76AF582122E0E9008D100A /* icons8-next-button-64.png in Resources */,
 				6E62987C20F612160087EBB1 /* Amsterdam Personal Use.ttf in Resources */,
 				6E62987F20F612360087EBB1 /* Beautiful People Personal Use.ttf in Resources */,
+				6E76AF5C2122E1AF008D100A /* icons8-pre-button-64-2.png in Resources */,
 				6E62987A20F611F10087EBB1 /* Cassandra Personal Use.ttf in Resources */,
+				6E76AF502122B943008D100A /* icons8-favorite-folder-64.png in Resources */,
+				6E76AF552122DFDD008D100A /* icons8-next-page-64 copy.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,24 +346,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EA69EAA20F7533700490CF8 /* FavouritesViewController.swift in Sources */,
+				6E112DE92125422000026206 /* Theme.swift in Sources */,
 				08A347DD20721C0600C63150 /* AuthorQuotesViewController.swift in Sources */,
 				6EA69EAC20F778A200490CF8 /* FavouriteQuotesTableViewCell.swift in Sources */,
+				6E1C3EAE212A906D00B98A49 /* ControllerViewCell.swift in Sources */,
 				08A4017B206CCBC200D902DF /* ViewController.swift in Sources */,
+				6E9F88142133C6C9004F8202 /* SettingsTableViewCell.swift in Sources */,
 				08A4018C206CCEEB00D902DF /* Data.swift in Sources */,
 				6EAFAD1220F4E61100CFBEDC /* CommentsViewController.swift in Sources */,
 				08A40179206CCBC200D902DF /* AppDelegate.swift in Sources */,
+				6E112DEF212542C600026206 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		6E9CB08120FC7F5100743345 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "WikipediaKit-iOS";
-			targetProxy = 6E9CB08020FC7F5100743345 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		08A4017C206CCBC200D902DF /* Main.storyboard */ = {
@@ -530,8 +480,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9B5EA542275677032B927057 /* Pods-Pquotes.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 92KR5F4NNS;
 				INFOPLIST_FILE = Pquotes/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
@@ -546,8 +496,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 69B17A618A0DA02D9984C4BD /* Pods-Pquotes.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 92KR5F4NNS;
 				INFOPLIST_FILE = Pquotes/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;

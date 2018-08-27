@@ -12,6 +12,8 @@ import Floaty
 
 
 class CommentsViewController: UIViewController{
+   
+    
     
     //Declarations here...
    
@@ -20,14 +22,13 @@ class CommentsViewController: UIViewController{
     
     @IBOutlet weak var navigationTitleItem: UINavigationItem!
     @IBOutlet weak var navigationBar: UINavigationBar!
-    @IBOutlet weak var prevButton: UIButton!
-    @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var commentLabel: UILabel!
-    @IBOutlet weak var scrollView: UIScrollView!
-   
+    @IBOutlet weak var nextButton: UIBarButtonItem!
+    @IBOutlet weak var prevButton: UIBarButtonItem!
+    
+    static var quotesData: Dictionary<String,AnyObject>?
     
     let defaults = UserDefaults.standard
-   
     
     var selectedValue:String = ""
     var quotes:[Any]?
@@ -74,83 +75,62 @@ class CommentsViewController: UIViewController{
        
     }
     
-  
-    
-    
-    
     @IBAction func backButtonClicked(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
     
-    
-    @IBAction func nextButtonClicked(_ sender: Any) {
+    @IBAction func nexButtonClicked(_ sender: Any) {
         // print("count: \(count)")
-                print("quotes.count: \(quotes!.count)")
-                if count < quotes!.count-1{
-                    count = count + 1
-                    commentLabel.fadeTransition(0.6)
-                    commentLabel.text = " \" \(quotes![count])\" "
-                }
-                if count  == quotes!.count-1{
-                    nextButton.isHidden = true
-                }
+        print("quotes.count: \(quotes!.count)")
+        if count < quotes!.count-1{
+            count = count + 1
+            commentLabel.fadeTransition(0.6)
+            commentLabel.text = " \" \(quotes![count])\" "
+        }
+        if count  == quotes!.count-1{
+            nextButton.isEnabled = false
+        }
         
-                if count == 1{
-                    prevButton.isHidden = false
-                }
+        if count == 1{
+            prevButton.isEnabled = true
+        }
         showingLabel.text = "Showing \(count+1) of \(quotes!.count)"
     }
-
-
-    @IBAction func prevButtonClicked(_ sender: Any) {
-       nextButton.isHidden = false
-                    if count > 0{
-                            count = count - 1
-                            commentLabel.fadeTransition(0.8)
-                            commentLabel.text = " \" \(quotes![count])\" "
-                            }
-                            if count == 0{
-                            prevButton.isHidden = true
-                            }
+    
+    func share(sender:UIView){
+        UIGraphicsBeginImageContext(view.frame.size)
+        view.layer.render(in: UIGraphicsGetCurrentContext()!)
+        UIGraphicsEndImageContext()
         
-                           if count > quotes!.count-1{
-                            nextButton.isHidden = false
-                            }
-           showingLabel.text = "Showing \(count+1) of \(quotes!.count)"
+        let author = "   By: "+selectedValue
+        
+        if let textToShare = commentLabel.text {//Enter link to your app here
+            let objectsToShare = [textToShare, author] as [Any]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            
+            //Excluded Activities
+            activityVC.excludedActivityTypes = [UIActivityType.airDrop, UIActivityType.addToReadingList]
+            
+            
+            activityVC.popoverPresentationController?.sourceView = sender
+            self.present(activityVC, animated: true, completion: nil)
+        }
+        
+    }
+
+    @IBAction func shareButtonClicked(_ sender: Any) {
+        share(sender: self.view)
     }
     
-   
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-      
-    
-        commentLabel.text = selectedValue
-       navigationTitleItem.title = selectedValue
+    @IBAction func addToFavouritesButtonClicked(_ sender: Any) {
+        //Getting string array from the userdefault......
+        var tempArray1 = self.defaults.stringArray(forKey: "SavedQuotesArray") ?? [String]()
+        var tempArray2 = self.defaults.stringArray(forKey: "SavedAuthorsArray") ?? [String]()
         
-        //Hiding prev and next buttons here...
-        prevButton.isHidden = true
-        nextButton.isHidden = true
-        
-        //Setting up Floating action button...
-        let image = UIImage(named: "favourite.png") as UIImage?
-        
-        let floaty = Floaty()
-        floaty.buttonImage  = image
-        floaty.buttonColor = UIColor(white: 1, alpha: 0)
-
-       
-        floaty.addItem("Add to favourites", icon: image, handler: { item in
+        if !tempArray1.contains(self.quotes![self.count] as! String){
             
-            //Getting string array from the userdefault......
-            var tempArray1 = self.defaults.stringArray(forKey: "SavedQuotesArray") ?? [String]()
-            var tempArray2 = self.defaults.stringArray(forKey: "SavedAuthorsArray") ?? [String]()
-          
-            if !tempArray1.contains(self.quotes![self.count] as! String){
-                
-                
+            
             
             
             //Appending the selected quotes to the saved favourite quotes array.........
@@ -165,44 +145,67 @@ class CommentsViewController: UIViewController{
             self.defaults.set(tempArray2,forKey: "SavedAuthorsArray")
             
             //print(tempArray2)
-                
-            }
-            else{
-                print("quote already in favourites")
-            }
             
-            //Prompting user...........
-            let alert = UIAlertController(title: "", message: "Added to favourites...", preferredStyle: .alert)
-            
-            //for dismissing alertview on background tap...
-            self.present(alert, animated: true) {
-                alert.view.superview?.isUserInteractionEnabled = true
-                alert.view.superview?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.alertControllerBackgroundTapped)))
-            }
-            
-            //for dismissing alert automatically after 2 seconds...
-            let when = DispatchTime.now() + 2
-            DispatchQueue.main.asyncAfter(deadline: when){
-                alert.dismiss(animated: true, completion: nil)
-            }
-            
-            //alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-           // self.present(alert, animated: true, completion: nil)
-            floaty.close()
-        })
+        }
+        else{
+            print("quote already in favourites")
+        }
         
-        floaty.addItem("View favourites",icon: image, handler: { item in
-            
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "FavouritesViewController") as! FavouritesViewController
-            self.present(nextViewController, animated: true, completion: nil)
-        })
+        //Prompting user...........
+        let alert = UIAlertController(title: "", message: "Added to favourites...", preferredStyle: .alert)
         
-        self.view.addSubview(floaty)
+        //for dismissing alertview on background tap...
+        self.present(alert, animated: true) {
+            alert.view.superview?.isUserInteractionEnabled = true
+            alert.view.superview?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.alertControllerBackgroundTapped)))
+        }
         
+        //for dismissing alert automatically after 2 seconds...
+        let when = DispatchTime.now() + 2
+        DispatchQueue.main.asyncAfter(deadline: when){
+            alert.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func preButtonClicked(_ sender: Any) {
+        nextButton.isEnabled = true
+        if count > 0{
+            count = count - 1
+            commentLabel.fadeTransition(0.8)
+            commentLabel.text = " \" \(quotes![count])\" "
+        }
+        if count == 0{
+            prevButton.isEnabled = false
+        }
         
+        if count > quotes!.count-1{
+            nextButton.isEnabled = true
+        }
+        showingLabel.text = "Showing \(count+1) of \(quotes!.count)"
+    }
+
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
+        print("author: \(selectedValue)")
+        ViewController.fromNotification = false
+        
+        commentLabel.text = selectedValue
+       navigationTitleItem.title = selectedValue
+        
+        //Hiding prev and next buttons here...
+        prevButton.isEnabled = false
+        nextButton.isEnabled = false
+        
+        if defaults.bool(forKey: "DarkTheme"){
+            Theme.darkTheme(view: self.view)
+            self.view.backgroundColor = UIColor.darkGray
+        }
+        else{
+            Theme.defaultTheme(view: self.view)
+            self.view.backgroundColor = UIColor(red: 238/255, green: 238/255, blue: 235/255, alpha: 1.0)
+        }
 
       //--------------------------------------------------------------------------------------
        
@@ -224,7 +227,7 @@ class CommentsViewController: UIViewController{
                 
                 //Checking if there are more than one quote by an author....
                 if commentString.count>1{
-                    nextButton.isHidden = false
+                    nextButton.isEnabled = true
                 }
                 
                 
@@ -262,6 +265,19 @@ class CommentsViewController: UIViewController{
     }
     */
     
+    static func getQuotesFromJson(){
+        if let path = Bundle.main.path(forResource: "comments", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
+                if let jsonResult = jsonResult as? Dictionary<String, AnyObject> {
+                    quotesData = jsonResult
+                }
+            } catch let error{
+                print(error.localizedDescription)
+            }
+        }
+    }
 
 }
 

@@ -9,38 +9,36 @@
 import UIKit
 
 class FavouritesViewController: UITableViewController {
-
-
-    @IBAction func backButtonClicked(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
     
     
     //Declarations.....
     @IBOutlet weak var backButton: UIBarButtonItem!
-    let defaults = UserDefaults.standard
+    var defaults = UserDefaults.standard
     var quotesArray:[String] = []
     var authorsArray:[String] = []
     
-    
-    
-  /*  func setUpNavBar(){
-        //For back button in navigation bar
-        let backButton = UIBarButtonItem()
-        backButton.title = "Back"
-        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+    override func viewDidAppear(_ animated: Bool) {
+        quotesArray = self.defaults.stringArray(forKey: "SavedQuotesArray") ?? [String]()
+        authorsArray = self.defaults.stringArray(forKey: "SavedAuthorsArray") ?? [String]()
+        //For syncing the text color of table cells...
+        if defaults.bool(forKey: "DarkTheme"){
+            tableView.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+            view.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        }
+        else{
+            Theme.defaultTheme(view: self.view)
+            tableView.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+            view.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        }
+        tableView.reloadData()
     }
-    */
+    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         //edgesForExtendedLayout = []
         // setUpNavBar()
-        
-        
-        
-        
         
         //Getting string array from the userdefault......
          quotesArray = self.defaults.stringArray(forKey: "SavedQuotesArray") ?? [String]()
@@ -53,6 +51,7 @@ class FavouritesViewController: UITableViewController {
     
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
+        print(quotesArray.count)
         return  quotesArray.count
     }
     
@@ -66,7 +65,6 @@ class FavouritesViewController: UITableViewController {
         
         cell.layer.borderColor = UIColor.gray.cgColor
         cell.layer.borderWidth = 0.6
-        
         return cell
     }
 
@@ -100,6 +98,7 @@ class FavouritesViewController: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
     }
 
+    
     /*
     // MARK: - Navigation
 
