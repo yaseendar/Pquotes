@@ -11,10 +11,13 @@ import UIKit
 class ControllerViewCell: UITableViewCell {
 
     @IBOutlet weak var quoteCountLabel: UILabel!
-    @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var authorLabel: UITextView!
+    @IBOutlet weak var contentCell: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
+    
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

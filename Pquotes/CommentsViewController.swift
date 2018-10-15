@@ -8,15 +8,17 @@
 
 import UIKit
 import SwiftyJSON
-import Floaty
 
 
 class CommentsViewController: UIViewController{
    
-    
+    @IBAction func authorImageClicked(_ sender: Any) {
+        authorInfoButtonClicked(sender)
+    }
     
     //Declarations here...
-   
+    @IBOutlet weak var authorImageView: UIImageView!
+    
     @IBOutlet weak var showingLabel: UILabel!
     
     
@@ -59,7 +61,7 @@ class CommentsViewController: UIViewController{
         let scrollableSize = CGSize(width: view.frame.size.width, height: web.scrollView.contentSize.height)
 
         web.scrollView.contentSize = scrollableSize
-         web.scalesPageToFit = true
+        web.scalesPageToFit = true
         
         
         let tempName = selectedValue.replacingOccurrences(of: " ", with: "_")
@@ -184,11 +186,30 @@ class CommentsViewController: UIViewController{
         showingLabel.text = "Showing \(count+1) of \(quotes!.count)"
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        if  UserDefaults.standard.bool(forKey: "quotesSwitch") == false && showingLabel.isHidden == false {
+            showingLabel.isHidden = false
+        }
+        else{
+            showingLabel.isHidden = true
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("author: \(selectedValue)")
+      
+        
+         if let image = UIImage(named: "authors/"+selectedValue.replacingOccurrences(of: " ", with: "_")+".jpg"){
+         authorImageView.image = image
+            authorImageView.layer.cornerRadius = authorImageView.frame.width/2
+            authorImageView.clipsToBounds = true
+         }
+         else{
+         authorImageView.image = UIImage(named:"authors/if_Writer_Male_Light_80929.png")
+         }
+        
+        
         ViewController.fromNotification = false
         
         commentLabel.text = selectedValue
@@ -218,7 +239,7 @@ class CommentsViewController: UIViewController{
                 
                 quotes = commentString
                
-                commentLabel.text = " \" \(commentString[0])\" "
+                commentLabel.text = " \(commentString[0]) "
                 
                 showingLabel.text  = "Showing 1 of \(commentString.count)"
                 if(commentString.count == 1){

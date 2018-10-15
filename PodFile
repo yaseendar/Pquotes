@@ -3,7 +3,12 @@ target 'Pquotes' do
 pod 'SwiftyJSON', :git =>'https://github.com/acegreen/SwiftyJSON.git', branch: 'swift3'
 
 use_frameworks!
-pod "Floaty", "~> 3.0.0" # Use version 4.0.0 for Swift 4.0
+pod 'Firebase/Core'
+pod 'Firebase/Crash'
+
+pod 'Fabric', '~> 1.7.11'
+pod 'Crashlytics', '~> 3.10.7'
+
 end
 
 post_install do |installer|
