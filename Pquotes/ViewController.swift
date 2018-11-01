@@ -267,11 +267,19 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelega
     
             let cell = sender as! UITableViewCell
             let selectedRow = tableView.indexPath(for: cell)!.row
+            
+           
+            
             if(defaults.bool(forKey: "quotesSwitch")){
-                destination.selectedValue = ViewController.filteredData[selectedRow].components(separatedBy: "~")[1]
+                destination.selectedValue = ViewController.filteredData[selectedRow].components(separatedBy: "~")[0]
+                
+                 destination.author = ViewController.filteredData[selectedRow].components(separatedBy: "~")[1]
+                destination.fromQuotes = true
             }
             else{
                 destination.selectedValue = ViewController.filteredData[selectedRow]
+                destination.author = ViewController.filteredData[selectedRow]
+
             }
         }
     }

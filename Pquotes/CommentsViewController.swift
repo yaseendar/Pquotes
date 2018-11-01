@@ -34,9 +34,9 @@ class CommentsViewController: UIViewController{
     
     var selectedValue:String = ""
     var quotes:[Any]?
-    
+    var author:String = String()
     var count:Int = 0
-    
+    var fromQuotes = false
 
     
     
@@ -105,7 +105,7 @@ class CommentsViewController: UIViewController{
         view.layer.render(in: UIGraphicsGetCurrentContext()!)
         UIGraphicsEndImageContext()
         
-        let author = "   By: "+selectedValue
+        let author = "   By: "+self.author
         
         if let textToShare = commentLabel.text {//Enter link to your app here
             let objectsToShare = [textToShare, author] as [Any]
@@ -139,7 +139,7 @@ class CommentsViewController: UIViewController{
             tempArray1.append(self.quotes![self.count] as! String)
             
             //Appending the selected authors to the saved favourite authors array.........
-            tempArray2.append(self.selectedValue)
+            tempArray2.append(self.author)
             
             
             //Saving the added results.........
@@ -200,7 +200,7 @@ class CommentsViewController: UIViewController{
         
       
         
-         if let image = UIImage(named: "authors/"+selectedValue.replacingOccurrences(of: " ", with: "_")+".jpg"){
+         if let image = UIImage(named: "authors/"+author.replacingOccurrences(of: " ", with: "_")+".jpg"){
          authorImageView.image = image
             authorImageView.layer.cornerRadius = authorImageView.frame.width/2
             authorImageView.clipsToBounds = true
@@ -213,7 +213,7 @@ class CommentsViewController: UIViewController{
         ViewController.fromNotification = false
         
         commentLabel.text = selectedValue
-       navigationTitleItem.title = selectedValue
+        navigationTitleItem.title = author
         
         //Hiding prev and next buttons here...
         prevButton.isEnabled = false
@@ -237,21 +237,22 @@ class CommentsViewController: UIViewController{
             let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
             if let jsonResult = jsonResult as? Dictionary<String, AnyObject>, let commentString = jsonResult[selectedValue] as? [Any] {
                 
-                quotes = commentString
+                if(!fromQuotes){
+                    quotes = commentString
+                    
+                    commentLabel.text = " \(commentString[0]) "
+                    
+                    showingLabel.text  = "Showing 1 of \(commentString.count)"
+                    if(commentString.count == 1){
+                        showingLabel.isHidden = true
+                    }
+                    
+                    //Checking if there are more than one quote by an author....
+                    if commentString.count>1{
+                        nextButton.isEnabled = true
+                    }
+                }
                
-                commentLabel.text = " \(commentString[0]) "
-                
-                showingLabel.text  = "Showing 1 of \(commentString.count)"
-                if(commentString.count == 1){
-                showingLabel.isHidden = true
-                }
-                
-                //Checking if there are more than one quote by an author....
-                if commentString.count>1{
-                    nextButton.isEnabled = true
-                }
-                
-                
         }
            } catch let error {
                print("parse error: \(error.localizedDescription)")
